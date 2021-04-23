@@ -1,3 +1,6 @@
-from django.urls import path
+from django.urls import path, include
 
-urlpatterns = []
+urlpatterns = [
+    path('', include('rest_auth.urls')),
+    path('register/', include('rest_auth.registration.urls')),
+]
